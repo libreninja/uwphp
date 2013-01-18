@@ -14,5 +14,16 @@ class testIsEmptyOrNull extends PHPUnit_Framework_TestCase
 
     }
 
+    /*
+     * @expectedException InvalidArgumentException
+     */
+    public function testInvalid()
+    {
+        try {
+            StringUtil::isNullOrEmpty( array() );
+        } catch( \InvalidArgumentException $e ) {
+            $this->assertSame( 'Args must be strings.', $e->getMessage() );
+        }
+    }
 }
 ?>
