@@ -3,7 +3,6 @@ require "Vendors/autoload.php";
 
 class testIsEmptyOrNull extends PHPUnit_Framework_TestCase
 {
-
     /*
      * test if string is null or empty
      */
