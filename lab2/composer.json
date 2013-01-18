@@ -15,7 +15,7 @@
     },
     "autoload": {
         "classmap": [
-            "Src/Util", "Tests/Util"
+            "Src/Util/", "Tests/Util/"
         ]
     },
     "config": {
