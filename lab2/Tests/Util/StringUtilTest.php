@@ -1,5 +1,5 @@
 <?php
-require "vendor/StringUtil.php";
+require "Vendors/autoload.php";
 
 class testIsEmptyOrNull extends PHPUnit_Framework_TestCase
 {
