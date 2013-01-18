@@ -1,0 +1,25 @@
+{
+    "name": "Lecture 2",
+    "description": "UW PHP course lecture2 demo code",
+    "authors": [
+    {
+        "name": "Jay Zeng",
+        "email": "jayzeng@jay-zeng.com"
+    }
+    ],
+    "require": {
+        "phpunit/phpunit": "3.7.*@dev"
+    },
+    "require-dev": {
+        "monolog/monolog": "1.2.1"
+    },
+    "autoload": {
+        "classmap": [
+            "Src/Util", "Tests/Util"
+        ]
+    },
+    "config": {
+        "vendor-dir" : "Vendors",
+        "vendor-bin" : "Vendors/bin"
+    }
+}
