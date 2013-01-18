@@ -3,12 +3,16 @@ require "Vendors/autoload.php";
 
 class testIsEmptyOrNull extends PHPUnit_Framework_TestCase
 {
-    public function testEmpty() {
-        $this->assertTrue( StringUtil::isNullOrEmpty( null ) );
+
+    /*
+     * test if string is null or empty
+     */
+    public function testEmpty( ) {
         $this->assertTrue( StringUtil::isNullOrEmpty( '' ) );
+        $this->assertTrue( StringUtil::isNullOrEmpty( NULL ) );
         $this->assertFalse( StringUtil::isNullOrEmpty( 'abc' ) );
-        $this->assertFalse( StringUtil::isNullOrEmpty( 1234 ) );
-        $this->assertFalse( StringUtil::isNullOrEmpty( array() ) );
+
     }
+
 }
 ?>
