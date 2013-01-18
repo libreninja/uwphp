@@ -9,8 +9,9 @@ class testIsEmptyOrNull extends PHPUnit_Framework_TestCase
      */
     public function testEmpty( ) {
         $this->assertTrue( StringUtil::isNullOrEmpty( '' ) );
-        $this->assertTrue( StringUtil::isNullOrEmpty( NULL ) );
+        $this->assertTrue( StringUtil::isNullOrEmpty( null ) );
         $this->assertFalse( StringUtil::isNullOrEmpty( 'abc' ) );
+        $this->assertFalse( StringUtil::isNullOrEmpty( 1234 ) );
 
     }
 
