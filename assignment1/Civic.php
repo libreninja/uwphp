@@ -8,19 +8,20 @@ require_once 'VehicleInterface.php';
 class Civic extends Car implements VehicleInterface
 {
     /**
-     * return number of vehicle doors
-     */
-	public function getNumberOfDoors()
-	{
-		return 3.14159;
-	}
+     * return number of doors
+     **/
+    public function getNumberOfDoors()
+    {
+        return 3;
+    }
 
     /**
-     * implement VehicleInterface::honk method
-     */
-	public function honk()
-	{
-		return 'honk honk';
-	}
+     * emit alert
+     **/
+    public function honk()
+    {
+        return "";
+    }
+
 }
 ?>
