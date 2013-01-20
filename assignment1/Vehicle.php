@@ -5,16 +5,39 @@
 */
 abstract class Vehicle
 {
-	/**
-	 * Number of doors
-	 * @var  int
-	 */
-	protected $_numberOfDoors;
+    /**
+     * Number of doors
+     * @var  int
+     */
+    protected $_numberOfDoors;
 
-	/**
-	 * return the number of doors
-	 * @return int
-	 */
-	abstract public function getNumberOfDoors();
+    /**
+     * Model year (format 'YYYY')
+     * @var  int
+     */
+    protected $_modelYear;
+    /**
+     * return the number of doors
+     * @return int
+     */
+    abstract public function getNumberOfDoors();
+
+    /**
+     * year getter
+     * @return string
+     **/
+    public function getYear()
+    {
+        return $_modelYear;
+    }
+
+    /**
+     * year setter
+     * @param $value string
+     **/
+    public function setYear($value)
+    {
+        $_modelYear = $value;
+    }
 }
 ?>

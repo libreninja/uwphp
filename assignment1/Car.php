@@ -12,18 +12,18 @@ class Car extends Vehicle implements VehicleInterface
 {
     /**
      * return number of doors
-     */
-	public function getNumberOfDoors()
-	{
-		return 3;
-	}
+     **/
+    public function getNumberOfDoors()
+    {
+        return 3;
+    }
 
     /**
-     * implement VehicleInterface method
-     */
-	public function honk()
-	{
-		return "";
-	}
+     * emit alert
+     **/
+    public function honk()
+    {
+        return "";
+    }
 }
 ?>

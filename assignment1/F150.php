@@ -6,21 +6,20 @@ require_once 'Truck.php';
  */
 class F150 extends Truck implements VehicleInterface
 {
-    
     /**
-     * @brief return number of doors
-     */
+     * return number of doors
+     **/
     public function getNumberOfDoors()
     {
-        return "half";
+        return 3;
     }
 
     /**
-     * raise alert noise
-     */
+     * emit alert
+     **/
     public function honk()
     {
-        return "beep";
+        return "";
     }
 }
 ?>
