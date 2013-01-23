@@ -13,7 +13,7 @@ class CarTest extends \PHPUnit_Framework_TestCase
 	 */
 	function testHonk()
 	{
-		$this->assertSame( 'beep', Car::honk() );
+		$this->assertSame( '', Car::honk() );
 	}
 }
 ?>
