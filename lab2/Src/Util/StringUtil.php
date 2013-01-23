@@ -8,11 +8,12 @@ class StringUtil
      * @brief return whether string input is null or empty
      */
     public static function isNullOrEmpty( $value ) {
-        if( is_array( $value ) && 0 === count( $value ) ) {
-            throw new \InvalidArgumentException( 'Args must be strings.' );
+        if( null === $value ) {
+            return true;
         }
 
-        if( null === $value || "" === $value ) {
+        if("" === $value ) {
+
             return true;
         }
 
