@@ -11,9 +11,9 @@ redo assignment #1 with the following new features
 
 next steps
 ==========
-add a failing test then commmit it
-fix failing test and commit
-generate test coverage
+- add a failing test then commmit it
+- fix failing test and commit
+- generate test coverage
 
 notes
 ==========
