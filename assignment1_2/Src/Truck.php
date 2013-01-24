@@ -8,6 +8,7 @@ class Truck
 
     public function honk()
     {
+        return '';
     }
 }
 ?>
