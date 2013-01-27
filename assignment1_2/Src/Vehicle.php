@@ -27,19 +27,13 @@ abstract class Vehicle
      * year getter
      * @return int
      */
-    protected function getYear()
-    {
-        return $this->_yearManufactured;
-    }
+    abstract protected function getYear();
 
     /**
      * year setter
      * @param int year
      */
-    protected function setYear( $value )
-    {
-        $this->_yearManufactured = $value;
-    }
+    abstract protected function setYear( $value );
 
     /**
      * Number of doors
@@ -51,20 +45,21 @@ abstract class Vehicle
      * Return the number of doors
      * @return int
      */
-    protected function getNumberOfDoors()
-    {
-        return $this->_numberOfDoors;
-    }
+    abstract protected function getNumberOfDoors();
 
     /**
      * numberOfDoors setter
      * @param int count of doors
      */
-    protected function setNumberOfDoors( $value )
+    abstract protected function setNumberOfDoors( $value );
+
+    public function __toString()
     {
-        $this->_numberOfDoors = $value;
+        $desc = "Vehicle( Year:" . $this->getYear()
+            . ", Doors:" . $this->getNumberOfDoors() . " )";
+
+        return $desc;
+    
     }
-
-
 }
 ?>

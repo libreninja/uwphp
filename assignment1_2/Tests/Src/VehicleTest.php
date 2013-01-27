@@ -1,6 +1,6 @@
 <?php 
 namespace Tests\Src;
-use \Src\Car as Vehicle;
+
 
 /**
  * Vehicle unit test code
@@ -8,31 +8,21 @@ use \Src\Car as Vehicle;
  class VehicleTest extends \PHPUnit_Framework_TestCase
  {
      /**
-      * @var int
-      **/
-     protected $_testVehicle;
-
-     public function getYearValues()
-     {
-         return array(
-             array( 1957 ),
-             array( 2010 ),
-             array( 1234 ),
-             array( 3333 )
-             );
-     }
-
-     protected function setUp()
-     {
-     }
-
-     /**
-      * @dataProvider getYearValues()
-      * @param  int $value year
+      * unit test for string representation of Vehicle
       */
-     public function testGetYear($value)
+     public function testToString()
      {
-         $this->assertSame($value, $this->_vehicle->getYear());
+         $stub = $this->getMockForAbstractClass( '\Src\Vehicle' );
+         $stub->expects( $this->any() )
+             ->method( 'getYear' )
+             ->will( $this->returnValue( 1993 ) );
+
+         $stub->expects( $this->any() )
+             ->method( 'getNumberOfDoors' )
+             ->will( $this->returnValue( 4 ) );
+
+         echo $stub->__toString();
+         $this->assertSame( 'Vehicle( Year:1993, Doors:4 )', $stub->__toString() );
      }
 
  }
