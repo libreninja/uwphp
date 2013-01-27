@@ -24,9 +24,8 @@ use \Src\Car as Vehicle;
 
      protected function setUp()
      {
-         $vehicleClass = $this->getMockClass( 'Vehicle', array('getYearValues') );
-         // $vehicleClass->
      }
+
      /**
       * @dataProvider getYearValues()
       * @param  int $value year

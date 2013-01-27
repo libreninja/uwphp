@@ -1,10 +1,46 @@
 <?php
-namespace Src;
 /**
- * Abstract class to represent vehicle
- */
+ * Assignment 1 part 2 - uw-php-course
+ *
+ * @author Josh Benner
+ * @version 0.1.2
+ * @copyright Josh Benner, 26 January, 2013
+ * @package ???
+ **/
+namespace Src;
+
+/**
+ * base vehicle class
+ *
+ * @package Src
+ * @author Josh Benner
+**/
 abstract class Vehicle
 {
+    /**
+     * year of manufacture
+     * @var int
+     **/
+    protected $_yearManufactured;
+
+    /**
+     * year getter
+     * @return int
+     */
+    protected function getYear()
+    {
+        return $this->_yearManufactured;
+    }
+
+    /**
+     * year setter
+     * @param int year
+     */
+    protected function setYear( $value )
+    {
+        $this->_yearManufactured = $value;
+    }
+
     /**
      * Number of doors
      * @var int
@@ -15,24 +51,20 @@ abstract class Vehicle
      * Return the number of doors
      * @return int
      */
-    abstract public function getNumberOfDoors();
-
-    /**
-     * year setter
-     * @param int year
-     */
-    public function setYear( $value )
+    protected function getNumberOfDoors()
     {
-        $this->_year = $value;
+        return $this->_numberOfDoors;
     }
 
     /**
-     * year getter
-     * @return int
+     * numberOfDoors setter
+     * @param int count of doors
      */
-    public function getYear()
+    protected function setNumberOfDoors( $value )
     {
-        return $this->_year;
+        $this->_numberOfDoors = $value;
     }
+
+
 }
 ?>

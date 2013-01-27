@@ -6,18 +6,19 @@ redo assignment #1 with the following new features
 - use namespaces *IN PROGRESS*
 - autoloading *WORKING*
 - unit tests for * public methods *IN PROGRESS*
-- Generate test coverage
+- Generate test coverage *IN PROGESS*
 
 
 next steps
 ==========
 - add a failing test then commmit it *DONE*
-- fix failing test and commit
-- generate test coverage
+- fix failing test and commit *DONE*
+- generate test coverage *DONE*
+- add more tests
 
 notes
 ==========
-this could be aliased
+phpunit recurses into sub directories
 ```bash
-$> ./Vendors/bin/phpunit Tests/Src/CarTest.php
+$> ./phpunit Tests
 ```
