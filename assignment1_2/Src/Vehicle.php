@@ -18,6 +18,20 @@ namespace Src;
 abstract class Vehicle
 {
     /**
+     * constructor
+     **/
+    public function __construct( $year = null )
+    {
+        // initialize 
+        if( !isset( $year ) )
+        {
+            $year = intval( date( 'Y' ) );
+        }
+        
+        $this->_yearManufactured = $year;
+    }
+
+    /**
      * year of manufacture
      * @var int
      **/
@@ -55,7 +69,7 @@ abstract class Vehicle
 
     public function __toString()
     {
-        $desc = "Vehicle( Year:" . $this->getYear()
+        $desc = get_class( $this ) . "( Year:" . $this->getYear()
             . ", Doors:" . $this->getNumberOfDoors() . " )";
 
         return $desc;

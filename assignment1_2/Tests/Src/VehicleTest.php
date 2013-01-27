@@ -8,21 +8,52 @@ namespace Tests\Src;
  class VehicleTest extends \PHPUnit_Framework_TestCase
  {
      /**
-      * unit test for string representation of Vehicle
-      */
-     public function testToString()
+      * stub for mocked abstract class
+      **/
+     protected $_stub;
+
+     /**
+      * setup mocks for test methods
+      **/
+     public function setUp()
      {
-         $stub = $this->getMockForAbstractClass( '\Src\Vehicle' );
-         $stub->expects( $this->any() )
+         $this->_stub = $this->getMockForAbstractClass( '\Src\Vehicle' );
+
+     }
+
+     /**
+      * return test values for toString method
+      * @return array
+      **/
+     public function getToStringValues()
+     {
+         return array(
+             array( 1999, 4 ),
+             array( 2013, 2 ),
+             array( 2015, 3 )
+         );
+     }
+
+     /**
+      * @dataProvider getToStringValues()
+      */
+     public function testToString( $year, $doors )
+     {
+         $expected = get_class( $this->_stub ) 
+             . "( Year:" . $year 
+             . ", Doors:" . $doors . " )";
+
+         $this->_stub
+             ->expects( $this->any() )
              ->method( 'getYear' )
-             ->will( $this->returnValue( 1993 ) );
+             ->will( $this->returnValue( $year ) );
 
-         $stub->expects( $this->any() )
+         $this->_stub
+             ->expects( $this->any() )
              ->method( 'getNumberOfDoors' )
-             ->will( $this->returnValue( 4 ) );
+             ->will( $this->returnValue( $doors ) );
 
-         echo $stub->__toString();
-         $this->assertSame( 'Vehicle( Year:1993, Doors:4 )', $stub->__toString() );
+         $this->assertSame( $expected, $this->_stub->__toString() );
      }
 
  }

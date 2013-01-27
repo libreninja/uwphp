@@ -19,21 +19,6 @@ use \Src\VehicleInterface as VehicleInterface;
  **/
 class Car extends Vehicle implements VehicleInterface
 {
-    
-    /**
-     * constructor
-     **/
-    public function __construct( $year )
-    {
-        // initialize 
-        if( !isset( $year ) )
-        {
-            $year = int( date( 'Y' ) );
-        }
-        
-        $this->_yearManufactured = $year;
-    }
-
     /**
      * VehicleInterface honk method
      *
