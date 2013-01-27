@@ -9,20 +9,35 @@
  **/
 namespace Src;
 
-require_once 'Car.php';
-require_once 'VehicleInterface.php';
 
 /**
  * derived Vehicle class modeling a Car object
  **/
 class Civic extends Car implements VehicleInterface
 {
+
+    /**
+     * civic brand member var
+     * @var string
+     **/
+    private $_brand;
+
+    /**
+     * constructor
+     **/
+    public function __construct( $year = null )
+    {
+        parent::__construct( $year );
+
+        $this->_brand = 'Honda';
+    }
+
     /**
      * emit alert
      **/
     public function honk()
     {
-        return "";
+        return "honk honk";
     }
 
 }
