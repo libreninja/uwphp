@@ -11,8 +11,6 @@ namespace Src;
 
 use \Src\Vehicle as Vehicle;
 use \Src\VehicleInterface as VehicleInterface;
-//require_once 'Vehicle.php';
-//require_once 'VehicleInterface.php';
 
 /**
  * derived Vehicle class modeling a Car object

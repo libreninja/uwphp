@@ -1,5 +1,13 @@
 <?php
-require_once 'Truck.php';
+/**
+ * Assignment 1 part 2 - uw-php-course
+ *
+ * @author Josh Benner
+ * @version 0.1.2
+ * @copyright Josh Benner, 26 January, 2013
+ * @package default
+ **/
+namespace Src;
 
 /**
  * Derived truck object.
@@ -7,11 +15,19 @@ require_once 'Truck.php';
 class F150 extends Truck implements VehicleInterface
 {
     /**
-     * return number of doors
+     * F150 brand member var
+     * @var string
      **/
-    public function getNumberOfDoors()
+    private $_brand;
+
+    /**
+     * constructor
+     **/
+    public function __construct( $year = null )
     {
-        return 3;
+        parent::__construct( $year );
+
+        $this->_brand = 'Ford';
     }
 
     /**
@@ -19,7 +35,8 @@ class F150 extends Truck implements VehicleInterface
      **/
     public function honk()
     {
-        return "";
+        return "BHWAAA-OOOOOONK";
     }
+
 }
 ?>
