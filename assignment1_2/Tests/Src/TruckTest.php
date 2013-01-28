@@ -15,7 +15,6 @@ use \Src\Truck as Truck;
 */
 class TruckTest extends \PHPUnit_Framework_TestCase
 {
-    
     /**
      * Test Truck implementation of VehicleInterface::honk()
      */
