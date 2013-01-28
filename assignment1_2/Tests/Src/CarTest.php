@@ -8,7 +8,7 @@
  * @package default
  **/
 namespace Tests\Src;
-use \Src\Car as Car;
+use \Vehicle\Car as Car;
 
 /**
 * Car class unit test code

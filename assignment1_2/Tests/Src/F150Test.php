@@ -8,7 +8,7 @@
  * @package ???
  **/
 namespace Tests\Src;
-use \Src\F150 as F150;
+use \Vehicle\F150 as F150;
 
 /**
 * Truck class unit test code

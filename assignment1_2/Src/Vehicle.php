@@ -7,7 +7,7 @@
  * @copyright Josh Benner, 26 January, 2013
  * @package ???
  **/
-namespace Src;
+namespace Vehicle;
 
 /**
  * base vehicle class

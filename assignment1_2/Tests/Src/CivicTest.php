@@ -8,8 +8,7 @@
  * @package default
  **/
 namespace Tests\Src;
-use \Src\Civic as Civic;
-
+use \Vehicle\Civic as Civic;
 
 /**
  * Civic unit test code
@@ -29,6 +28,7 @@ use \Src\Civic as Civic;
          $this->_mock = new Civic();
 
      }
+
      /**
       * return test values for toString method
       * @return array
@@ -55,13 +55,14 @@ use \Src\Civic as Civic;
 
          $this->assertSame( $expected, $this->_mock->__toString() );
      }
-    /**
-     * Test Car implementation of VehicleInterface::honk()
-     */
-    function testHonk()
-    {
-        $this->assertSame( 'honk honk', Civic::honk() );
-    }
+
+     /**
+      * Test Car implementation of VehicleInterface::honk()
+      */
+     function testHonk()
+     {
+         $this->assertSame( 'honk honk', Civic::honk() );
+     }
 
  }
  ?>
