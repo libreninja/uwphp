@@ -47,8 +47,7 @@ use \Src\Civic as Civic;
       */
      public function testToString( $year, $doors )
      {
-         $expected = get_class( $this->_mock ) 
-             . "( Year:" . $year 
+         $expected = "Civic( Year:" . $year 
              . ", Doors:" . $doors . " )";
 
          $this->_mock->setYear( $year );

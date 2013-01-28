@@ -46,8 +46,7 @@ class F150Test extends \PHPUnit_Framework_TestCase
       */
      public function testToString( $year, $doors )
      {
-         $expected = get_class( $this->_mock ) 
-             . "( Year:" . $year 
+         $expected = "F150( Year:" . $year 
              . ", Doors:" . $doors . " )";
 
          $this->_mock->setYear( $year );

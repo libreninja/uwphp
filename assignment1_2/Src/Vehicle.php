@@ -69,7 +69,9 @@ abstract class Vehicle
 
     public function __toString()
     {
-        $desc = get_class( $this ) . "( Year:" . $this->getYear()
+
+        $fun = new \ReflectionClass( get_class( $this ) );
+        $desc = $fun->getShortName() . "( Year:" . $this->getYear()
             . ", Doors:" . $this->getNumberOfDoors() . " )";
 
         return $desc;
