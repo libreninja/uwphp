@@ -8,19 +8,19 @@
  * @package ???
  **/
 namespace Tests\Src;
-use \Vehicle\Truck as Truck;
 
 /**
 * Truck class unit test code
 */
 class TruckTest extends \PHPUnit_Framework_TestCase
 {
+    
     /**
      * Test Truck implementation of VehicleInterface::honk()
      */
     public function testHonk()
     {
-        $this->assertSame( '', Truck::honk() );
+        $this->assertSame( '', \Vehicle\Truck::honk() );
     }
 
 }

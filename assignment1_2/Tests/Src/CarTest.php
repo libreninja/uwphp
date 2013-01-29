@@ -8,7 +8,6 @@
  * @package default
  **/
 namespace Tests\Src;
-use \Vehicle\Car as Car;
 
 /**
 * Car class unit test code
@@ -20,7 +19,7 @@ class CarTest extends \PHPUnit_Framework_TestCase
      */
     function testHonk()
     {
-        $this->assertSame( '', Car::honk() );
+        $this->assertSame( '', \Vehicle\Car::honk() );
     }
 }
 ?>

@@ -8,7 +8,6 @@
  * @package ???
  **/
 namespace Tests\Src;
-use \Vehicle\F150 as F150;
 
 /**
 * Truck class unit test code
@@ -25,7 +24,7 @@ class F150Test extends \PHPUnit_Framework_TestCase
       **/
      public function setUp()
      {
-         $this->_mock = new F150();
+         $this->_mock = new \Vehicle\F150();
 
      }
      /**
@@ -60,7 +59,7 @@ class F150Test extends \PHPUnit_Framework_TestCase
      */
     public function testHonk()
     {
-        $this->assertSame( 'BHWAAA-OOOOOONK', F150::honk() );
+        $this->assertSame( 'BHWAAA-OOOOOONK', $this->_mock->honk() );
     }
 
 }

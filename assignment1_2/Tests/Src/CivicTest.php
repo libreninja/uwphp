@@ -8,7 +8,6 @@
  * @package default
  **/
 namespace Tests\Src;
-use \Vehicle\Civic as Civic;
 
 /**
  * Civic unit test code
@@ -25,7 +24,7 @@ use \Vehicle\Civic as Civic;
       **/
      public function setUp()
      {
-         $this->_mock = new Civic();
+         $this->_mock = new \Vehicle\Civic();
 
      }
 
@@ -61,7 +60,7 @@ use \Vehicle\Civic as Civic;
       */
      function testHonk()
      {
-         $this->assertSame( 'honk honk', Civic::honk() );
+         $this->assertSame( 'honk honk', $this->_mock->honk() );
      }
 
  }

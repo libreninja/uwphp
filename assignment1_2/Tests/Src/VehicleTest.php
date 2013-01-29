@@ -9,7 +9,6 @@
  **/
 namespace Tests\Src;
 
-
 /**
  * Vehicle unit test code
  */
