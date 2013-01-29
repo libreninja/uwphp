@@ -7,10 +7,10 @@
  * @copyright Josh Benner, 26 January, 2013
  * @package ???
  **/
-namespace Src;
+namespace Vehicle;
 
-use \Src\Vehicle as Vehicle;
-use \Src\VehicleInterface as VehicleInterface;
+use \Vehicle\Vehicle as Vehicle;
+use \Vehicle\VehicleInterface as VehicleInterface;
 
 /**
  * derived Vehicle class modeling Truck object

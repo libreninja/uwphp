@@ -8,7 +8,7 @@
  * @package ???
  **/
 namespace Tests\Src;
-use \Src\Truck as Truck;
+use \Vehicle\Truck as Truck;
 
 /**
 * Truck class unit test code

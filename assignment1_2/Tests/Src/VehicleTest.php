@@ -25,7 +25,7 @@ namespace Tests\Src;
       **/
      public function setUp()
      {
-         $this->_stub = $this->getMockForAbstractClass( '\Src\Vehicle' );
+         $this->_stub = $this->getMockForAbstractClass( '\Vehicle\Vehicle' );
 
      }
 

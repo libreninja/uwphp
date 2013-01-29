@@ -7,7 +7,7 @@
  * @copyright Josh Benner, 26 January, 2013
  * @package default
  **/
-namespace Src;
+namespace Vehicle;
 
 /**
  * VehicleInterface class - defines alert method
