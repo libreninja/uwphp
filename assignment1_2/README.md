@@ -22,3 +22,9 @@ phpunit recurses into sub directories
 ```bash
 $> ./phpunit Tests
 ```
+
+codecoverage
+```bash
+$> ./phpunit --coverage-html report Tests
+```
+
