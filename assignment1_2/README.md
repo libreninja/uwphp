@@ -23,6 +23,11 @@ phpunit recurses into sub directories
 $> ./phpunit Tests
 ```
 
+use a phpunit config file. Enables autoloading and reporting etc...
+```bash
+$> ./phpunit -c Tests/Config/phpunit.xml
+```
+
 codecoverage
 ```bash
 $> ./phpunit --coverage-html report Tests
