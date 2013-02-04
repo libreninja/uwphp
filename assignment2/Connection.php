@@ -118,7 +118,12 @@ class Connection
         $sql = "INSERT INTO ". $table. " (";
         $sql .= implode($cols, ','). ") VALUES(:". implode($cols, ',:'). ");";
 
-        return $this->prepareSQL( $sql, $inserts )->rowCount();
+        if( $this->prepareSQL( $sql, $inserts ) instanceof \PDOStatement )
+        {
+            return $this->_conn->lastinsertid();
+        }
+
+        throw new \Exception('Insert failed.');
     }
 
     /**
@@ -172,7 +177,7 @@ $configArray = array(
 try {
     $cn = new Connection( $configArray );
     $cn->connect();
-    //$cn->insert('User', array('firstname'=>'Ferris', 'lastname'=>'Bueller'));
+    //$v = $cn->insert('User', array('firstname'=>'Ray', 'lastname'=>'Davies'));
     //$cn->update('User', array('lastname' => 'Benner'), "lastname = :lastname", array(':lastname'=>'B-)'));
     //$cn->delete('User', "lastname=:lastname", array(':lastname'=>'Bueller'));
     $data = $cn->select('User'); //, 'lastname=:lastname', array(':lastname' => 'Auerbach'));
