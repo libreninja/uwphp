@@ -91,8 +91,6 @@ class Connection
         $sql = "SELECT ". $fields. " FROM ". $table;
         $sql .= ";";
 
-        printf( $sql . PHP_EOL);
-
         return $this->prepareSQL( $sql, $params )->fetchAll();
     }
 
@@ -185,6 +183,6 @@ try {
         print_r($row);
     }
 } catch(\PDOException $ex) {
-    printf( $ex->getMessage() );
+    printf( $ex->getMessage() . PHP_EOL );
 }
 ?>
